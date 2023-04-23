@@ -68,10 +68,11 @@ while True:
         public_id=youtube.video_id,
         overwrite=True
     )
+    ved_strmlt_app ="https://mythesis002-whatsappytdownloder-yt-mnrhqh.streamlit.app/"
 
     if 'secure_url' in upload_result:
         video_url = upload_result['secure_url']
-        print(f"Video uploaded to Cloudinary successfully! URL: {https://mythesis002-whatsappytdownloder-yt-mnrhqh.streamlit.app/}")
+        print(f"Video uploaded to Cloudinary successfully! URL: {ved_strmlt_app}")
         # Send a message with the Cloudinary URL of the video
         dump = client.messages.list(to='whatsapp:+14155238886', limit=1)[0]
         # Print details of the message
