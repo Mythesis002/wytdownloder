@@ -1,3 +1,0 @@
-streamlit==1.21.0
-pytube==12.1.2
-cloudinary==1.32.0
