@@ -7,7 +7,7 @@ from twilio.rest import Client
 
 # Set up the Twilio client using your account SID and auth token
 account_sid = 'AC8d5920728a89dac8da9113c077ccac20'
-auth_token = '9fc14b0e42ea8d238c56232ac0ecc424'
+auth_token = '5b0a03f3d54312a38692aac2af69db7c'
 client = Client(account_sid, auth_token)
 
 # Retrieve the last message from a specific WhatsApp conversation
