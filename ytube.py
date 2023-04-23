@@ -4,23 +4,30 @@ import re
 import io
 from pytube import YouTube
 from twilio.rest import Client
+import time
+
+while True:
+    # Your code here
+
 
 # Set up the Twilio client using your account SID and auth token
-account_sid = 'AC8d5920728a89dac8da9113c077ccac20'
-auth_token = '5b0a03f3d54312a38692aac2af69db7c'
-client = Client(account_sid, auth_token)
+ account_sid = 'AC8d5920728a89dac8da9113c077ccac20'
+ auth_token = '5b0a03f3d54312a38692aac2af69db7c'
+ client = Client(account_sid, auth_token)
 
 # Retrieve the last message from a specific WhatsApp conversation
-messages = client.messages.list(from_='whatsapp:+14155238886',)
-if messages:
+ messages = client.messages.list(from_='whatsapp:+14155238886',)
+ if messages:
     last_message = messages[0].body
     Mlink = last_message 
     print(Mlink)
-else:
+    
+
+ else:
     print("No messages found.")
 
 # Extract the YouTube video URL or short URL from the message
-def extract_youtube_url(message):
+ def extract_youtube_url(message):
     pattern = r'(https?://)?(www\.)?(youtube|youtu\.be)/(watch\?v=|embed/|v/)?[\w\-]{11}'
     match = re.search(pattern, message)
     if match:
@@ -33,24 +40,19 @@ def extract_youtube_url(message):
         if match:
             return match.group()
         else:
-            dump = client.messages.list(to='whatsapp:+14155238886', limit=1)[0]
-            message = client.messages.create(
-                body="Send me a video URL",
-                from_='whatsapp:+14155238886',
-                to=dump._from
-            )
+            
 
 # Set up Cloudinary credentials
-cloudinary.config(
+         cloudinary.config(
     cloud_name="dwj7tznit",
     api_key="678549699212321",
     api_secret="b0QPfC_oXWUluc6Mt2Y92YzNK6E"
 )
 
 # Download the video and upload it to Cloudinary
-youtube_url = extract_youtube_url(Mlink)
-print(youtube_url)
-if youtube_url:
+ youtube_url = extract_youtube_url(Mlink)
+ print(youtube_url)
+ if youtube_url:
     
     # Create a YouTube object with the video URL
     youtube = YouTube(youtube_url)
@@ -95,6 +97,8 @@ if youtube_url:
         )
 
 
+    # Wait for 60 seconds before running the code again
+    time.sleep(60)
 
 
 
