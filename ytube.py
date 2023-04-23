@@ -9,7 +9,6 @@ import time
 while True:
     # Your code here
 
-
 # Set up the Twilio client using your account SID and auth token
  account_sid = 'AC8d5920728a89dac8da9113c077ccac20'
  auth_token = '5b0a03f3d54312a38692aac2af69db7c'
@@ -21,12 +20,10 @@ while True:
     last_message = messages[0].body
     Mlink = last_message 
     print(Mlink)
-    
-
  else:
     print("No messages found.")
 
-# Extract the YouTube video URL or short URL from the message
+ # Extract the YouTube video URL or short URL from the message
  def extract_youtube_url(message):
     pattern = r'(https?://)?(www\.)?(youtube|youtu\.be)/(watch\?v=|embed/|v/)?[\w\-]{11}'
     match = re.search(pattern, message)
@@ -39,11 +36,10 @@ while True:
         match = re.search(pattern, message)
         if match:
             return match.group()
-        else:
-            
+        
 
 # Set up Cloudinary credentials
-         cloudinary.config(
+ cloudinary.config(
     cloud_name="dwj7tznit",
     api_key="678549699212321",
     api_secret="b0QPfC_oXWUluc6Mt2Y92YzNK6E"
@@ -97,8 +93,6 @@ while True:
         )
 
 
-    # Wait for 60 seconds before running the code again
-    time.sleep(60)
 
 
 
