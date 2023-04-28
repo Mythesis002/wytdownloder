@@ -11,7 +11,7 @@ while True:
 
 # Set up the Twilio client using your account SID and auth token
  account_sid = 'AC8d5920728a89dac8da9113c077ccac20'
- auth_token = '99b3d95304337afa218df42526ca1dcd'
+ auth_token = '5b0a03f3d54312a38692aac2af69db7c'
  client = Client(account_sid, auth_token)
 
 # Retrieve the last message from a specific WhatsApp conversation
@@ -68,11 +68,10 @@ while True:
         public_id=youtube.video_id,
         overwrite=True
     )
-    ved_strmlt_app ="https://mythesis002-whatsappytdownloder-yt-mnrhqh.streamlit.app/"
 
     if 'secure_url' in upload_result:
         video_url = upload_result['secure_url']
-        print(f"Video uploaded to Cloudinary successfully! URL: {ved_strmlt_app}")
+        print(f"Video uploaded to Cloudinary successfully! URL: {video_url}")
         # Send a message with the Cloudinary URL of the video
         dump = client.messages.list(to='whatsapp:+14155238886', limit=1)[0]
         # Print details of the message
@@ -92,10 +91,5 @@ while True:
             from_='whatsapp:+14155238886',
             to=dump._from
         )
-
-
-
-
-
 
 
