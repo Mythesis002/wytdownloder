@@ -11,7 +11,7 @@ while True:
 
 # Set up the Twilio client using your account SID and auth token
  account_sid = 'AC8d5920728a89dac8da9113c077ccac20'
- auth_token = '5b0a03f3d54312a38692aac2af69db7c'
+ auth_token = '99b3d95304337afa218df42526ca1dcd'
  client = Client(account_sid, auth_token)
 
 # Retrieve the last message from a specific WhatsApp conversation
