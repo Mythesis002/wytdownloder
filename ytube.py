@@ -99,4 +99,4 @@ while True:
         )
 
 
- time.sleep()
+ time.sleep(30)
