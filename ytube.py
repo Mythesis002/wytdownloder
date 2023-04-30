@@ -11,7 +11,7 @@ while True:
 
 # Set up the Twilio client using your account SID and auth token
  account_sid = 'AC8d5920728a89dac8da9113c077ccac20'
- auth_token = '99b3d95304337afa218df42526ca1dcd'
+ auth_token = 'eeae5dd8f9d29195268e7d9d6b6009ca'
  client = Client(account_sid, auth_token)
 
 
