@@ -83,7 +83,7 @@ while True:
         print("From:", dump._from)
         # Send WhatsApp message with video URL
         message = client.messages.create(
-           body = "Here is your video:\n" + video_url + "\n\nTradex is a Opinion based Trading platform. Earn by opninio" + tradex + "\n\nRegister with code 'gir71p' and earn 10 rupees on signup.! #Promotion #tradex",
+           body = "Here is your video:\n" + video_url + "\n\n" + tradex + "\n\nRegister with code 'gir71p' and earn 10 rupees on signup.! #Promotion #tradex",
 
             from_='whatsapp:+14155238886',
             to=dump._from
