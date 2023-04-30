@@ -1,5 +1,5 @@
 cloudinary==1.32.0
-pytube==12.1.3
+https://github.com/neo-DevNull/pytube/archive/refs/heads/fix-streamingData-bug.zip
 streamlit==1.21.0
 streamlit-player==0.1.5
 twilio==8.0.0
