@@ -68,6 +68,8 @@ while True:
         public_id=youtube.video_id,
         overwrite=True
     )
+    tradex = "https://tradexapp.onelink.me/lPdS/yynpsory"
+
 
     if 'secure_url' in upload_result:
         video_url = upload_result['secure_url']
