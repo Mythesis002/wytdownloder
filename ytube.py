@@ -14,6 +14,16 @@ while True:
  auth_token = '99b3d95304337afa218df42526ca1dcd'
  client = Client(account_sid, auth_token)
 
+
+
+ 
+# Set up Cloudinary credentials
+ cloudinary.config(
+    cloud_name="dwj7tznit",
+    api_key="678549699212321",
+    api_secret="b0QPfC_oXWUluc6Mt2Y92YzNK6E"
+)
+
 # Retrieve the last message from a specific WhatsApp conversation
  messages = client.messages.list(from_='whatsapp:+14155238886',)
  if messages:
@@ -38,12 +48,6 @@ while True:
             return match.group()
         
 
-# Set up Cloudinary credentials
- cloudinary.config(
-    cloud_name="dwj7tznit",
-    api_key="678549699212321",
-    api_secret="b0QPfC_oXWUluc6Mt2Y92YzNK6E"
-)
 
 # Download the video and upload it to Cloudinary
  youtube_url = extract_youtube_url(Mlink)
@@ -70,7 +74,6 @@ while True:
     )
     tradex = "https://tradexapp.onelink.me/lPdS/yynpsory"
 
-
     if 'secure_url' in upload_result:
         video_url = upload_result['secure_url']
         print(f"Video uploaded to Cloudinary successfully! URL: {video_url}")
@@ -80,7 +83,8 @@ while True:
         print("From:", dump._from)
         # Send WhatsApp message with video URL
         message = client.messages.create(
-            body = "Here is your video:\n" + video_url + "\n\nTradex is a Opinion based Trading platform. Earn by opninio" + tradex + "\n\nRegister with code 'gir71p' and earn 10 rupees on signup.! #Promotion #tradex",
+           body = "Here is your video:\n" + video_url + "\n\nTradex is a Opinion based Trading platform. Earn by opninio" + tradex + "\n\nRegister with code 'gir71p' and earn 10 rupees on signup.! #Promotion #tradex",
+
             from_='whatsapp:+14155238886',
             to=dump._from
         )
@@ -95,3 +99,4 @@ while True:
         )
 
 
+ time.sleep(60)
