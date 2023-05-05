@@ -19,9 +19,9 @@ while True:
  
 # Set up Cloudinary credentials
  cloudinary.config(
-    cloud_name="dwj7tznit",
-    api_key="678549699212321",
-    api_secret="b0QPfC_oXWUluc6Mt2Y92YzNK6E"
+    cloud_name="dkr5qwdjd",
+    api_key="797349366477678",
+    api_secret="9HUrfG_i566NzrCZUVxKyCHTG9U"
 )
 
 # Retrieve the last message from a specific WhatsApp conversation
